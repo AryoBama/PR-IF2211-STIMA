@@ -48,3 +48,6 @@ Langkah-Langkah Program
    ```
    ruby tsp.rb
    ```
+
+## Author
+Aryo Bama Wiratama (13523088)
