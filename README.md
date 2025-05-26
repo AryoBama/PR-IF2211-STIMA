@@ -1,5 +1,5 @@
 # Traveling Salesman Problem
-![image](https://github.com/user-attachments/assets/a4ef0849-7775-49f8-835d-ca226415a904)
+<img src="https://www.lystloc.com/blog/wp-content/uploads/2024/03/Travelling-Salesman-Problem.webp" alt="Logo Ruby" width="150" />
 [souce image](https://www.lystloc.com/blog/what-is-a-travelling-salesman-problem-tsp/)
 
 ## Description
