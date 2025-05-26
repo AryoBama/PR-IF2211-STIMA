@@ -15,6 +15,36 @@ Pendekatan ini menggunakan teknik Bitmask DP, yaitu menyimpan status kota mana y
 - 1111 → semua kota telah dikunjungi
 
 Struktur data utama adalah tabel 2 dimensi:
-```
+```- 
 dp[mask][u]
 ```
+
+Langkah-Langkah Program
+1. Inisialisasi:
+   - Jumlah kota n diambil dari panjang matriks graph.
+   - dp diisi dengan Float::INFINITY sebagai nilai awal (belum ada rute).
+   - dp[1][0] = 0 berarti memulai dari kota ke-0 dengan biaya 0.
+2. Iterasi Subset Kota:
+   - Untuk setiap kombinasi mask (status kunjungan kota)
+   - Untuk setiap kota u yang sudah dikunjungi (mask & (1 << u) ≠ 0)
+   - Coba kunjungi kota lain v yang belum dikunjungi (mask & (1 << v) == 0)
+   - Hitung mask baru new_mask = mask | (1 << v) dan perbarui dp[new_mask][v].
+   - Lakukan perhitungan biaya baru
+3. Menyelesaikan Rute:
+   - Setelah semua kota dikunjungi (mask == (1 << n) - 1)
+   - Cari biaya minimum untuk kembali ke kota asal (kota ke-0)
+   - Ambil nilai minimum dari dp[all_visited][u] + graph[u][0].
+
+## Cara menjalankan program
+1. Unduh repository
+   ```bash
+    git clone https://github.com/AryoBama/PR-IF2211-STIMA.git
+   ```
+2. Pindah ke direktori
+   ```bash
+   cd PR-IF2211-STIMA/src
+   ```
+3. Jalankan progaram
+   ```
+   ruby tsp.rb
+   ```
